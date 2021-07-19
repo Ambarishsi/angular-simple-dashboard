@@ -1,0 +1,33 @@
+
+
+#left-nav{
+  position: relative;
+  height:100vh;
+  overflow-y: scroll;
+}
+
+#left-nav::-webkit-scrollbar {
+  display: none;
+}
+
+li{
+  list-style-type: none;
+}
+
+.card-body{
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.card{
+  cursor: pointer;
+  font-size: small;
+  font-weight: 500;
+  margin-bottom: 5px;
+  box-shadow: 0 0 3px 0 rgba(0,0,0,0.2);
+}
+
+.card :hover{
+  background-color:cornflowerblue;
+  color: white;
+}

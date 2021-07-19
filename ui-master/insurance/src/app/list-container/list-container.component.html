@@ -1,0 +1,34 @@
+
+<div class="input-group mb-4 filter" >
+  <div class="input-group-prepend">
+    <button id="button-addon7" type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
+  </div>
+  <input type="search" [(ngModel)]="filterTerm" placeholder="Search with: policy-id/customer-id/premium...."  class="form-control shadow-none"/>
+</div>
+
+<div id="left-nav">
+
+  <div class="card" *ngFor="let clientdetail of clientData | searchCustomer: filterTerm">
+    <div class="card-body" (click)="clientItem(clientdetail)">
+      <div style="float: left;">
+        <li>
+          policy id: {{clientdetail.Policy_id}}
+        </li>
+        <li>
+          Customer id: {{clientdetail.Customer_id}}
+        </li>
+      </div>
+
+      <div style="float: right;">
+        <li>
+          Premium: {{clientdetail.Premium}}
+        </li>
+        <li>
+          gender: {{clientdetail.Customer_Gender}}
+        </li>
+      </div>
+    </div>
+  </div>
+
+</div>
+

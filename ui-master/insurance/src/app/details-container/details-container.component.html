@@ -1,0 +1,132 @@
+<div class="card">
+  <div class="card-body">
+
+    <div class="row">
+      <div class="col-md-12 edit">
+          <i class="fa fa-edit"></i>
+      </div>
+    </div>
+
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="material-textfield">
+          <input type="text" placeholder=" " class="form-control shadow-none" formControlName="policy">
+          <label>Policy ID</label>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="material-textfield">
+          <input type="text" readonly placeholder=" "  class="form-control shadow-none" formControlName="dateOfPurchase">
+          <label>Date of Purchase</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="material-textfield">
+          <input type="text" placeholder=" " class="form-control shadow-none" formControlName="customerId">
+          <label>Customer ID</label>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="material-textfield">
+          <input type="text" placeholder=" " class="form-control shadow-none"  formControlName="fuel">
+          <label>Fuel</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="material-textfield">
+          <input type="text" placeholder=" " class="form-control shadow-none"  formControlName="vehicleSegment">
+          <label>Vehicle Segment</label>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="material-textfield">
+          <input type="text" placeholder=" " class="form-control shadow-none"  formControlName="premium">
+          <label>Premium</label>
+          <div style="color: red" *ngIf="myForm.get('premium').invalid && (myForm.get('premium').dirty || myForm.get('premium').touched)">
+            Premium must be less than 1 million
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="material-textfield">
+          <input type="text" placeholder=" " class="form-control shadow-none"  formControlName="bodilyInjuryLiability">
+          <label>Bodily Injury Liability</label>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="material-textfield">
+          <input type="text" placeholder=" " class="form-control shadow-none" formControlName="personalInjury">
+          <label>Personal Injury Protection</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="material-textfield">
+          <input type="text" placeholder=" " class="form-control shadow-none" formControlName="propertyDamageLibility">
+          <label>Property Damage Liability</label>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="material-textfield">
+          <input type="text" placeholder=" " class="form-control shadow-none" formControlName="collision">
+          <label>Collision</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="material-textfield">
+          <input type="text" placeholder=" " class="form-control shadow-none" formControlName="comprehensive">
+          <label>Comprehensive</label>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="material-textfield">
+          <input type="text" placeholder=" " class="form-control shadow-none"  formControlName="customerGender">
+          <label>Customer Gender</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="material-textfield">
+          <input type="text" placeholder=" " class="form-control shadow-none"  formControlName="incomeGrp">
+          <label>Customer Income Group</label>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="material-textfield">
+          <input type="text" placeholder=" " class="form-control shadow-none"  formControlName="customerRegion">
+          <label>Customer Region</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="material-textfield">
+          <input type="text" placeholder=" " class="form-control shadow-none"  formControlName="maritalStatus">
+          <label>Customer Marital Status</label>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <button type="submit" [disabled]="myForm.invalid" class="btn btn-primary save"><i class="fa fa-save"></i> Save</button>
+      </div>
+    </div>
+  </form>
+    </div>
+  </div>
