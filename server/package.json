@@ -1,0 +1,21 @@
+{
+  "name": "insurance",
+  "version": "1.0.0",
+  "description": "Used for reading excel file",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ambarish",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.16.2",
+    "neat-csv": "^6.0.1",
+    "nodemon": "^2.0.12"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
+}
